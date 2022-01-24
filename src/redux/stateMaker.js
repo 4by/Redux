@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { INC, DEC, THEME } from './dispArgs';
+import { INCR, DECR, THEME } from './dispArgs';
 
 function counterStateReducer(state = 0, action) {
   switch (action.type) {
-    case INC.type: return ++state;
-    case DEC.type: return --state;
+    case INCR.type: return ++state;
+    case DECR.type: return --state;
     default: return state;
   }
 }

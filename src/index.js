@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { stateMaker } from './redux/stateMaker';
 import {
-  ASYNC_INC, INC, DEC, WHATEVER, THEME,
+  ASYNC_INCR, INCR, DECR, WHATEVER, THEME,
 } from './redux/dispArgs';
 
 const countElem = document.getElementById('counter');
@@ -36,7 +36,7 @@ store.subscribe(rerenderByState);
 // 2)изменяет стейт под действием входного аргумента
 // стейт можно увидеть только после первого dispatch
 store.dispatch(WHATEVER);
-addElem.addEventListener('click', () => store.dispatch(INC));
-subElem.addEventListener('click', () => store.dispatch(DEC));
-asynElem.addEventListener('click', () => store.dispatch(ASYNC_INC));
+addElem.addEventListener('click', () => store.dispatch(INCR));
+subElem.addEventListener('click', () => store.dispatch(DECR));
+asynElem.addEventListener('click', () => store.dispatch(ASYNC_INCR));
 themeElem.addEventListener('click', () => store.dispatch(THEME));
