@@ -1,0 +1,14 @@
+body {
+    transition: .2s all ease-in;
+  }
+  
+  body.dark {
+    background: #343a40;
+    color: #fff;
+  }
+  
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
