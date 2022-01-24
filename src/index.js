@@ -3,10 +3,8 @@ import './styles.css';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import { stateMaker } from './redux/stateMaker';
-import {
-  ASYNC_INCR, INCR, DECR, WHATEVER, THEME,
-} from './redux/dispArgs';
+import { stateMaker } from './stateMaker';
+import {ASYNC_INCR, INCR, DECR, WHATEVER, THEME,} from './dispArgs';
 
 const countElem = document.getElementById('counter');
 const addElem = document.getElementById('add');
@@ -16,7 +14,6 @@ const themeElem = document.getElementById('theme');
 
 // создает стейт, где есть стейт-значение и массив стейт-функций
 // под капотом данные стейта - это данные из замыкания функции createStore
-
 // applyMiddleware передает функционал в dispatch
 // thunk чтобы работал асинронный вызов
 // logger чтобы данные выводились в консоль
